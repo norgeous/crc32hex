@@ -1,0 +1,30 @@
+{
+  "name": "crc32hex",
+  "main": "crc32hex.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/norgeous/crc32hex",
+  "authors": [
+    "norgeous <daniel@danielharte.co.uk>"
+  ],
+  "description": "A javascript CRC32 that returns as hex, rather than a 32bit unsigned int",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "javascript",
+    "crc",
+    "crc32",
+    "hex"
+  ],
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-crc32": "sheetjs/js-crc32#~0.3.0"
+  }
+}
