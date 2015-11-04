@@ -1,21 +1,12 @@
 # crc32hex
-A javascript CRC32 that returns as hex, rather than a 32bit unsigned int
+A javascript CRC32 that returns hex, rather than a 32bit unsigned int
 
 * return values match php's crc() function, 
-* an instance of this object will cache crc operations for performance
+* an instance of this class will cache crc operations for performance
 
-## useage
+## usage
 
-module is supports AMD (requirejs), CommonJS (npm) and Globals export modes.
-
-### AMD
-coming soon
-
-### CommonJS
-coming soon
-
-### Globals
-coming soon
+[WIP]
 
 #### disable caching
 

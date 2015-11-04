@@ -1,25 +1,36 @@
 {
   "name": "crc32hex",
-  "main": "crc32hex.js",
   "version": "0.0.1",
-  "homepage": "https://github.com/norgeous/crc32hex",
-  "description": "A javascript CRC32 that returns as hex, rather than a 32bit unsigned int",
-  "dependencies": {
-    "crc-32": "^0.3.0"
+  "description": "A javascript CRC32 that returns hex",
+  "main": "crc32hex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "javascript",
-    "crc",
-    "crc32",
-    "hex"
-  ],
-  "license": "UNLICENCED",
-  "author": "norgeous <daniel@danielharte.co.uk>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/norgeous/crc32hex.git"
   },
+  "keywords": [
+    "javascript",
+    "crc32",
+    "checksum",
+    "crc",
+    "hex"
+  ],
+  "author": "norgeous",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/norgeous/crc32hex/issues"
+  },
+  "homepage": "https://github.com/norgeous/crc32hex#readme",
+  "jspm": {
+    "dependencies": {
+      "sheetjs/js-crc32": "github:sheetjs/js-crc32@^0.3.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
