@@ -31,4 +31,3 @@ If you are doing thousands of different crc operations on strings that you are c
 ```js
 let mycrc = new crc32hex({useCache:false});
 ```
-*todo
