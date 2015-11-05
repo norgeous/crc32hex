@@ -12,10 +12,12 @@
   },
   "keywords": [
     "javascript",
+    "jspm",
+    "crc",
     "crc32",
     "checksum",
-    "crc",
-    "hex"
+    "hex",
+    "hexadecimal"
   ],
   "author": "norgeous",
   "license": "Apache-2.0",

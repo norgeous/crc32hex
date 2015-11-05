@@ -2,48 +2,54 @@ import CRC32 from 'sheetjs/js-crc32';
 
 export class crc32hex {
 	
-	constructor() {
-		this.options={useCache: true};
-		this.crcCache={};
+	constructor(config = {}) {
+
+		// extend default options
+		this.options = Object.assign({
+			useCache: true
+		}, config);
+
+		// create empty cache
+		this.crcCache = {};
 	}
 
-	str(str) {
+	str(str = "", config = {}) {
 
-		str = str || "";
+		// extend class options with incoming
+		let options = Object.assign({}, this.options, config);
 
-		//force input to be string
+		// force string
 		str = str.toString();
-
-		let crc = "";
 
 		// check crc already cached
 		if (this.crcCache[str] !== undefined) {
 
-			//recall from cache
-			crc = this.crcCache[str];
+			// recall from cache
+			return this.crcCache[str];
 
 		} else {
 
-			//get crc from sheetjs crc32
-			crc = CRC32.str(str);
+			// get crc from sheetjs crc32
+			let crc = CRC32.str(str);
 
-			//convert unsigned 32-bit integer
+			// convert unsigned 32-bit integer
 			if (crc < 0) {crc += 4294967296;}
 
-			//convert to hex and uppercase
+			// convert to hex and uppercase
 			crc = crc.toString(16).toUpperCase();
 
-			//zero pad
+			// zero pad
 			crc = ("00000000" + crc).slice(-8);
 
-			//cache
-			if (this.options.useCache) {
+			// cache crc
+			if (options.useCache === true) {
 				this.crcCache[str] = crc;
 			}
 
+			// return crc (may or may not have been cached)
+			return crc;
 		}
 
-		return crc;
 	}
 
 } 
