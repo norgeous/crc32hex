@@ -1,8 +1,0 @@
-.gitignore
-jspm_packages/
-
-build.js
-build.js.map
-config.js
-
-*.ssc
