@@ -1,6 +1,6 @@
 import CRC32 from 'sheetjs/js-crc32';
 
-export class crc32hex {
+export default class crc32hex {
 	
 	constructor(config = {}) {
 
